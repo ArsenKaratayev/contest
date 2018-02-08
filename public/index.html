@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" href="stylesheets/group.css">
+<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/angular-local-storage.js"></script>
+<script src="/controllers/mainController.js"></script>
+<script src="/controllers/addUserController.js"></script>
+<script src="/controllers/usersListController.js"></script>
+<script src="/controllers/editUserController.js"></script>
+<title></title>
+</head>
+<body ng-app="Example">
+	<div class=" container center" ng-controller="mainController">
+        <div class="student">
+            <button class="but1 btn btn-info" ng-click="goTo('/addUser')">Добавить пользоветеля</button>
+            <button class="but1 btn btn-info" ng-click="goTo('/usersList')">Список пользоветелей</button>
+        </div>
+		<div class="student" ng-view>
+            
+		</div>
+	</div>
+</body>
+</html>

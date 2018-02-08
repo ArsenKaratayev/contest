@@ -1,0 +1,61 @@
+<div class="">
+	<div class="tenpx">
+		<h2>Добавить пользователя</h2>
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Введите имя</div>
+		<input class="input1" type="text" ng-model="name" placeholder="Name">
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Введите фамилию</div>
+		<input class="input1" type="text" ng-model="surname" placeholder="Surname">
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Введите отчество</div>
+		<input class="input1" type="text" ng-model="patronymic" placeholder="Patronymic">
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Выберите пол
+		    <input type="radio" ng-model="gender" value="male">
+		    <label>Male</label>
+		    <input type="radio" ng-model="gender" value="female">
+		    <label>Female</label>
+	    </div>
+	</div>	
+	<div class="bigFont tenpx">
+		<div class="tenpx">Укажите ссылку на фото</div>
+		<input class="input1" type="text" ng-model="photo" placeholder="Photo">
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Выберите должность</div>
+		<div class="">
+		  <select ng-model="position" class="input1">
+		    <option value="секретарь">Секретарь</option>
+		    <option value="начальник">Начальник</option>
+		    <option value="администратор">Администратор</option>
+		    <option value="директор">Директор</option>
+		    <option value="работник">Работник</option>
+		  </select>
+		</div>
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Выберите подразделение</div>
+		<div class="">
+		  <select ng-model="subdivision" class="input1">
+		    <option value="Департамент управления персоналом">Департамент управления персоналом</option>
+		    <option value="Департамент управления рисками">Департамент управления рисками</option>
+		  </select>
+		</div>
+	</div>
+	<div class="bigFont tenpx">
+		<div class="tenpx">Укажите доступы</div>
+		<div class="" ng-repeat="access in accesses">
+		    <input type="checkbox" value="{{access}}" ng-click="setAccess(access)">
+		    <label for="createDeposite">{{access}}</label>
+		</div>
+	</div>
+	<div class="tenpx">
+		<button class="but4 btn btn-primary tenpx" ng-click="sendUser()">Добавить пользователя</button>
+		<a class="btn btn-danger tenpx" href="/">Отмена</a>
+	</div>
+</div>
