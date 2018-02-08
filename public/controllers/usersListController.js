@@ -8,6 +8,8 @@ app.controller("usersListController" , function ($scope, $http, $rootScope, $loc
     self.gender = "";
     self.position = "";
     self.subdivision = "";
+    self.users = [];
+    self.nonFilterUsers = [];
 
     self.load = function () {
         $http
@@ -15,6 +17,7 @@ app.controller("usersListController" , function ($scope, $http, $rootScope, $loc
             .then(function (response) {
                 if (response.status === 200) {
                     self.users = response.data.slice();
+                    self.nonFilterUsers = self.users;
                 }
             },
             function (response) {
@@ -26,14 +29,15 @@ app.controller("usersListController" , function ($scope, $http, $rootScope, $loc
     self.load();
 
     self.filter = function() {
+        self.nonFilterUsers = self.users;
         var filterUsers = [];
-        var bname = true; 
-        var bsurname = true;
-        var bpatronymic = true;
-        var bgender = true;
-        var bposition = true;
-        var bsubdivision = true;
         for (var i = 0; i < self.users.length; i++) {
+            var bname = true; 
+            var bsurname = true;
+            var bpatronymic = true;
+            var bgender = true;
+            var bposition = true;
+            var bsubdivision = true;
             if (self.name != "") {
                 if (self.users[i].name != self.name) {
                     bname = false;
@@ -69,7 +73,7 @@ app.controller("usersListController" , function ($scope, $http, $rootScope, $loc
             }
         }
         console.log(bname, bsurname, bpatronymic, bgender, bposition, bsubdivision)
-        self.users = filterUsers;
+        self.nonFilterUsers = filterUsers;
     }
 
     self.updateUser = function(userID) {

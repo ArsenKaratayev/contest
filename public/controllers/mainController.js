@@ -10,10 +10,6 @@ var app = angular
                 templateUrl : "views/usersList.html",
                 controller : "usersListController"
             })
-            // .when("/item", {
-            //     templateUrl : "views/item.html",
-            //     controller : "itemController"
-            // })
             .when("/editUser", {
                 templateUrl : "views/editUser.html",
                 controller : "editUserController"

@@ -1,0 +1,78 @@
+.hh2 {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 8px #42a6b8;
+}
+.center {
+	text-align: center;
+	justify-content: center;
+}
+.tenpx {
+	margin-bottom: 10px;
+}
+.twenpx {
+	margin-bottom: 30px;
+}
+.input1 {
+	width: 200px;
+	height: 25px;
+}
+.input2 {
+	width: 160px;
+	height: 25px;
+}
+.but1 {
+	margin-top: 10px;
+	width: 210px;
+	height: 45px;
+}
+.but2 {
+	width: 40px;
+	height: 25px;
+}
+.but3 {
+	width: 126px;
+	margin-left: 8px;
+	margin-top: 6px;
+}
+.but4 {
+	width: 200px;
+	height: 35px;
+}
+.border {
+	width: 100px;
+	border-bottom: 1px solid black;
+}
+.a {
+	display: inline-block;
+	border-style: solid black;
+}
+.b {
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+}
+.left {
+	float: left;
+}
+.fp {
+	margin-left: 50px;
+}
+.student {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*background-color: gray;*/
+}
+.group {
+	/*background-color: black;*/
+	/*color: white;*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.teacher {
+	/*color: white;*/
+	/*background-color: black;*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.bigFont {
+	font-size: 120%;
+}

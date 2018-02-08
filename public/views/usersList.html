@@ -47,7 +47,8 @@
 		<button class="but4 btn btn-primary tenpx" ng-click="filter()">Фильтр</button>
 	</div>
 </div>
-<div class="bigFont" ng-repeat="user in users">
+<h1>Список пользователей</h1>
+<div class="bigFont" ng-repeat="user in nonFilterUsers">
 	<div class="">
 		<b>{{user.name}} {{user.surname}} {{user.position}}</b>
 		<a ng-click="getPhoto(user.photo)">Фото</a>

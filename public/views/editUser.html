@@ -53,6 +53,10 @@
 		    <input type="checkbox" value="{{access}}" ng-click="setAccess(access)" checked>
 		    <label for="createDeposite">{{access}}</label>
 		</div>
+		<div class="" ng-repeat="access in accesses">
+		    <input type="checkbox" value="{{access}}" ng-click="setAccess(access)">
+		    <label for="createDeposite">{{access}}</label>
+		</div>
 	</div>
 	<div class="tenpx">
 		<button class="but4 btn btn-primary tenpx" ng-click="updateUser()">Изменить пользователя</button>
